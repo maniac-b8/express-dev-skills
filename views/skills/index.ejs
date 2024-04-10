@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
+<%- include('../partials/header') %>
     <ul>
         <% skills.forEach(function(s) { %>
         <li>
@@ -16,5 +9,4 @@
         <% }) %>
     </ul>
     <h4><a href="/">Home</a></h4>
-  </body>
-</html>
+<%- include('../partials/footer') %>
