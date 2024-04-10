@@ -8,11 +8,17 @@ const skills = [
 
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create
 }
 
 function getAll() {
     return skills
+}
+
+function create(skill) {
+    skill.id = skills[skills.length - 1].id+1
+    skills.push(skill)
 }
 
 function getOne(id) {
