@@ -3,5 +3,13 @@
     <h2><%= skill.skill %></h2>
     <h3><%= skill.level %>/10</h3>
     <p> <%= skill.description %> </p>
+    <div class="simple-flex">
+      <form class="button-form" action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button>delete</button>
+      </form>
+      <form class="button-form" action="/skills/<%= skill.id %>/edit" method="GET">
+        <button>edit</button>
+      </form>
+    </div>
     <h4><a href="/skills">Back to All Skills</a></h4>
 <%- include('../partials/footer') %>
